@@ -1,1 +1,50 @@
-
+{
+  "version": 1,
+  "models": [
+    {
+      "id": "parakeet-tdt-0.6b-v2-int8",
+      "name": "Parakeet TDT 0.6B v2 (English)",
+      "description": "English-only TDT. Best accuracy of the 3 local options. ~661MB.",
+      "type": "parakeet-tdt",
+      "size_mb": 661,
+      "download_base": "https://huggingface.co/smcleod/parakeet-tdt-0.6b-v2-int8/resolve/main/",
+      "files": ["nemo128.onnx", "encoder-model.int8.onnx", "decoder_joint-model.int8.onnx", "vocab.txt", "config.json"]
+    },
+    {
+      "id": "parakeet-tdt-0.6b-v3-int8",
+      "name": "Parakeet TDT 0.6B v3 (Multilingual)",
+      "description": "25 languages, but slightly lower English accuracy than v2. Manual download only (nvidia gated repo). ~456MB.",
+      "type": "parakeet-tdt",
+      "size_mb": 456,
+      "download_base": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3-int8/resolve/main/",
+      "files": ["nemo128.onnx", "encoder-model.int8.onnx", "decoder_joint-model.int8.onnx", "vocab.txt", "config.json"]
+    },
+    {
+      "id": "moonshine-base-quantized",
+      "name": "Moonshine Base (Quantized)",
+      "description": "Tiny and fast — only 63MB. Optimized for edge/CPU. English-only.",
+      "type": "moonshine",
+      "size_mb": 63,
+      "download_base": "https://huggingface.co/UsefulSensors/moonshine/resolve/main/onnx/merged/base/quantized/",
+      "files": ["encoder_model.onnx", "decoder_model_merged.onnx", "tokenizer.bin"]
+    },
+    {
+      "id": "whisper-tiny-en",
+      "name": "Whisper Tiny English",
+      "description": "39M params, English-only, ~150MB INT8. Fastest Whisper option.",
+      "type": "whisper",
+      "size_mb": 150,
+      "download_base": "",
+      "files": ["encoder_model.onnx", "decoder_model.onnx", "decoder_with_past_model.onnx", "tokenizer.json", "config.json", "preprocessor_config.json"]
+    },
+    {
+      "id": "whisper-base-en",
+      "name": "Whisper Base English",
+      "description": "74M params, English-only, ~300MB INT8. Good balance of speed and accuracy.",
+      "type": "whisper",
+      "size_mb": 300,
+      "download_base": "",
+      "files": ["encoder_model.onnx", "decoder_model.onnx", "decoder_with_past_model.onnx", "tokenizer.json", "config.json", "preprocessor_config.json"]
+    }
+  ]
+}
