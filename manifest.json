@@ -20,30 +20,31 @@
       "files": ["nemo128.onnx", "encoder-model.int8.onnx", "decoder_joint-model.int8.onnx", "vocab.txt", "config.json"]
     },
     {
-      "id": "moonshine-base-quantized",
-      "name": "Moonshine Base (Quantized)",
-      "description": "Tiny and fast — only 63MB. Optimized for edge/CPU. English-only.",
-      "type": "moonshine",
-      "size_mb": 63,
-      "download_base": "https://huggingface.co/UsefulSensors/moonshine/resolve/main/onnx/merged/base/quantized/",
-      "files": ["encoder_model.onnx", "decoder_model_merged.onnx", "tokenizer.bin"]
+      "id": "whisper-tiny-en",
+      "name": "Whisper Tiny (INT8)",
+      "description": "39M params, multilingual, dynamic INT8 (no ConvInteger). ~227MB.",
+      "type": "whisper",
+      "size_mb": 227,
+      "download_base": "https://huggingface.co/onnx-community/whisper-tiny-ONNX/resolve/main/",
+      "files": ["onnx/encoder_model_int8.onnx", "onnx/decoder_model_int8.onnx", "onnx/decoder_with_past_model_int8.onnx", "tokenizer.json", "config.json", "preprocessor_config.json", "merges.txt", "vocab.json", "added_tokens.json"]
     },
-   {
-  "id": "whisper-tiny-en",
-  "name": "Whisper Tiny (INT8)",
-  "description": "39M params, multilingual, INT8 quantized for CPU. ~227MB.",
-  "type": "whisper",
-  "size_mb": 227,
-  "download_base": "https://huggingface.co/EvgenyShivchenkoUIT/whisper-tiny-ONNX-multi-int8-full/resolve/main/",
-  "files": ["onnx/encoder_model_int8.onnx", "onnx/decoder_model_int8.onnx", "onnx/decoder_with_past_model_int8.onnx", "tokenizer.json", "config.json", "preprocessor_config.json", "merges.txt", "vocab.json", "added_tokens.json"]
-},
-{
-  "id": "whisper-base-en",
-  "name": "Whisper Base (INT8)",
-  "description": "74M params, multilingual, INT8 quantized for CPU. ~337MB.",
-  "type": "whisper",
-  "size_mb": 337,
-  "download_base": "https://huggingface.co/EvgenyShivchenkoUIT/whisper-base-ONNX-multi-int8-full/resolve/main/",
-  "files": ["onnx/encoder_model_int8.onnx", "onnx/decoder_model_int8.onnx", "onnx/decoder_with_past_model_int8.onnx", "tokenizer.json", "config.json", "preprocessor_config.json", "merges.txt", "vocab.json", "added_tokens.json"]
-}  ]
+    {
+      "id": "whisper-base-en",
+      "name": "Whisper Base (INT8)",
+      "description": "74M params, multilingual, dynamic INT8 (no ConvInteger). ~337MB.",
+      "type": "whisper",
+      "size_mb": 337,
+      "download_base": "https://huggingface.co/onnx-community/whisper-base-ONNX/resolve/main/",
+      "files": ["onnx/encoder_model_int8.onnx", "onnx/decoder_model_int8.onnx", "onnx/decoder_with_past_model_int8.onnx", "tokenizer.json", "config.json", "preprocessor_config.json", "merges.txt", "vocab.json", "added_tokens.json"]
+    },
+    {
+      "id": "moonshine-base",
+      "name": "Moonshine Base (FP32)",
+      "description": "Tiny and fast FP32 model, English-only. No ConvInteger issues. ~247MB.",
+      "type": "moonshine",
+      "size_mb": 247,
+      "download_base": "https://huggingface.co/UsefulSensors/moonshine/resolve/main/onnx/merged/base/float/",
+      "files": ["encoder_model.onnx", "decoder_model_merged.onnx", "tokenizer.bin", "config.json"]
+    }
+  ]
 }
