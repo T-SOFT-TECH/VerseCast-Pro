@@ -28,23 +28,22 @@
       "download_base": "https://huggingface.co/UsefulSensors/moonshine/resolve/main/onnx/merged/base/quantized/",
       "files": ["encoder_model.onnx", "decoder_model_merged.onnx", "tokenizer.bin"]
     },
-    {
-      "id": "whisper-tiny-en",
-      "name": "Whisper Tiny English",
-      "description": "39M params, English-only, ~150MB INT8. Fastest Whisper option.",
-      "type": "whisper",
-      "size_mb": 150,
-      "download_base": "",
-      "files": ["encoder_model.onnx", "decoder_model.onnx", "decoder_with_past_model.onnx", "tokenizer.json", "config.json", "preprocessor_config.json"]
-    },
-    {
-      "id": "whisper-base-en",
-      "name": "Whisper Base English",
-      "description": "74M params, English-only, ~300MB INT8. Good balance of speed and accuracy.",
-      "type": "whisper",
-      "size_mb": 300,
-      "download_base": "",
-      "files": ["encoder_model.onnx", "decoder_model.onnx", "decoder_with_past_model.onnx", "tokenizer.json", "config.json", "preprocessor_config.json"]
-    }
-  ]
+   {
+  "id": "whisper-tiny-en",
+  "name": "Whisper Tiny (INT8)",
+  "description": "39M params, multilingual, INT8 quantized for CPU. ~227MB.",
+  "type": "whisper",
+  "size_mb": 227,
+  "download_base": "https://huggingface.co/EvgenyShivchenkoUIT/whisper-tiny-ONNX-multi-int8-full/resolve/main/",
+  "files": ["onnx/encoder_model_int8.onnx", "onnx/decoder_model_int8.onnx", "onnx/decoder_with_past_model_int8.onnx", "tokenizer.json", "config.json", "preprocessor_config.json", "merges.txt", "vocab.json", "added_tokens.json"]
+},
+{
+  "id": "whisper-base-en",
+  "name": "Whisper Base (INT8)",
+  "description": "74M params, multilingual, INT8 quantized for CPU. ~337MB.",
+  "type": "whisper",
+  "size_mb": 337,
+  "download_base": "https://huggingface.co/EvgenyShivchenkoUIT/whisper-base-ONNX-multi-int8-full/resolve/main/",
+  "files": ["onnx/encoder_model_int8.onnx", "onnx/decoder_model_int8.onnx", "onnx/decoder_with_past_model_int8.onnx", "tokenizer.json", "config.json", "preprocessor_config.json", "merges.txt", "vocab.json", "added_tokens.json"]
+}  ]
 }
