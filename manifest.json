@@ -19,15 +19,7 @@
       "download_base": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3-int8/resolve/main/",
       "files": ["nemo128.onnx", "encoder-model.int8.onnx", "decoder_joint-model.int8.onnx", "vocab.txt", "config.json"]
     },
-   {
-  "id": "whisper-tiny-en",
-  "name": "Whisper Tiny (FP32)",
-  "description": "39M params, multilingual, FP32 (no ConvInteger). ~265MB.",
-  "type": "whisper",
-  "size_mb": 265,
-  "download_base": "https://huggingface.co/onnx-community/whisper-tiny-ONNX/resolve/main/",
-  "files": ["onnx/encoder_model.onnx", "onnx/decoder_model.onnx", "onnx/decoder_with_past_model.onnx", "tokenizer.json", "config.json", "preprocessor_config.json", "merges.txt", "vocab.json", "added_tokens.json"]
-},
+ 
 {
   "id": "whisper-base-en",
   "name": "Whisper Base (FP32)",
